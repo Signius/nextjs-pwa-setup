@@ -1,3 +1,4 @@
+import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
@@ -10,7 +11,7 @@ const APP_DEFAULT_TITLE = "My Awesome PWA App";
 const APP_TITLE_TEMPLATE = "%s - PWA App";
 const APP_DESCRIPTION = "Best PWA app in the world!";
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
   applicationName: APP_NAME,
   title: {
@@ -45,6 +46,10 @@ export const metadata = {
     },
     description: APP_DESCRIPTION,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FFFFFF",
 };
 
 export default function RootLayout({
